@@ -18,7 +18,7 @@ cmake --build .
 ```
 mkdir build-atmega328p
 cd build-atmega328p
-cmake -D_CMAKE_TOOLCHAIN_FILE=../toolchain-atmega328p.cmake ..
+cmake -DCMAKE_TOOLCHAIN_FILE=../toolchain-atmega328p.cmake ..
 cmake --build .
 ```
 ### Flash and open terminal
