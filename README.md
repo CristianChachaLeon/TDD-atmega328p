@@ -21,3 +21,9 @@ cd build-atmega328p
 cmake -D_CMAKE_TOOLCHAIN_FILE=../toolchain-atmega328p.cmake ..
 cmake --build .
 ```
+### Flash and open terminal
+```
+make flash
+
+sudo minicom -D <PORT>
+```
