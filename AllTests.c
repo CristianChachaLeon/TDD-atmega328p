@@ -87,9 +87,17 @@ int main(int argc, const char* argv[])
 	init_uart();
 	stdout = &uart_output;
 	printf("cross compilation-test in atmega328p\n");
-
-	argv = "-v";
+	argc = 2;   //accept 2 argument (./Test -v)
+	argv[1] = "-v"; // add log  like argument to ./Test
 	#endif
+    printf("argc: %d\n" ,argc);
+
+    for (size_t i = 0; i < argc; i++)
+    {
+        printf("%s ",argv[i]);
+    }
+    printf("\n");
+    
 	return UnityMain(argc, argv, RunAllTests);
 }
 
