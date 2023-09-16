@@ -62,16 +62,11 @@ TEST(led,deleteLed){
 	TEST_FAIL_MESSAGE("second fail");
 }
 
-//TEST(led,turnOn){
-//	TEST_FAIL_MESSAGE("third fail");
-//}
-
 
 TEST_GROUP_RUNNER(led)                                          
 {                                                                     
     RUN_TEST_CASE(led, initialization);
 	RUN_TEST_CASE(led,deleteLed);
-	//RUN_TEST_CASE(led,turnOn);
 }
 
 static void RunAllTests(void)
