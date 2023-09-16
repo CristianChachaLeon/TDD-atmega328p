@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 project(TestUnity)
 set(PROGRAM Test)
-add_executable(${PROGRAM} AllTests.c ./Unity/extras/fixture/src/unity_fixture.c ./Unity/src/unity.c)
+add_executable(${PROGRAM} AllTests.c ledTests.c ledTestsRunner.c ./Unity/extras/fixture/src/unity_fixture.c ./Unity/src/unity.c)
 
 #add_executable(${PROGRAM} AllTests.c ledTests.c ledTestsRunner.c ./Unity/extras/fixture/src/unity_fixture.c ./Unity/src/unity.c)
 #add_executable(Test AllTests.c ledTestsRunner.c ledTests.c)

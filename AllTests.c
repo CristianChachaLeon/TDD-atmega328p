@@ -45,30 +45,6 @@ void init_uart()
                                                                     
 #endif 
 
-TEST_GROUP(led);
-
-TEST_SETUP(led){
-}
-
-TEST_TEAR_DOWN(led){
-}
-
-
-TEST(led,initialization){
-	TEST_FAIL_MESSAGE("start here!");
-}
-
-TEST(led,deleteLed){
-	TEST_FAIL_MESSAGE("second fail");
-}
-
-
-TEST_GROUP_RUNNER(led)                                          
-{                                                                     
-    RUN_TEST_CASE(led, initialization);
-	RUN_TEST_CASE(led,deleteLed);
-}
-
 static void RunAllTests(void)
 {
 	RUN_TEST_GROUP(led);
