@@ -5,7 +5,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: ubuntu-tdd-container
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
     volumes:
       - ./../:/workspace/
-      - /dev/sda1:/dev/sda1
     command: [ "tail", "-f", "/dev/null" ]

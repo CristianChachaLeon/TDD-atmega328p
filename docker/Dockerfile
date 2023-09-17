@@ -11,4 +11,5 @@ RUN apt-get update &&   \
 	cmake               \
 	gcc-avr 			\
 	avr-libc			\
-	avrdude
+	avrdude				\
+	minicom
