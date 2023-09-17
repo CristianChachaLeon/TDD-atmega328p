@@ -1,0 +1,12 @@
+version: '3'
+services:
+  ubuntu-tdd-container:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ubuntu-tdd-container
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    volumes:
+      - ./../:/workspace/
+    command: [ "tail", "-f", "/dev/null" ]
