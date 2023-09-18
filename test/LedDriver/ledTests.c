@@ -1,15 +1,15 @@
 #include "unity_fixture.h"
 
 
-TEST_GROUP(led);
+TEST_GROUP(LedDriver);
 
-TEST_SETUP(led){
+TEST_SETUP(LedDriver){
 }
 
-TEST_TEAR_DOWN(led){
+TEST_TEAR_DOWN(LedDriver){
 }
 
-TEST(led,initialization){
+TEST(LedDriver,LedsOffAfterCreate){
 	TEST_FAIL_MESSAGE("start here! led test");
 }
 

@@ -47,7 +47,7 @@ void init_uart()
 
 static void RunAllTests(void)
 {
-	RUN_TEST_GROUP(led);
+	RUN_TEST_GROUP(LedDriver);
 
 }
 
