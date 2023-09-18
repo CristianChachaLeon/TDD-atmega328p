@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 project(TestUnity)
 set(PROGRAM Test)
-add_executable(${PROGRAM} test/AllTests.c test/LedDriver/ledTests.c test/LedDriver/ledTestsRunner.c ./Unity/extras/fixture/src/unity_fixture.c ./Unity/src/unity.c)
+add_executable(${PROGRAM} test/AllTests.c test/LedDriver/ledTests.c test/LedDriver/ledTestsRunner.c src/LedDriver/LedDriver.c ./Unity/extras/fixture/src/unity_fixture.c ./Unity/src/unity.c)
 
 #add_executable(${PROGRAM} AllTests.c ledTests.c ledTestsRunner.c ./Unity/extras/fixture/src/unity_fixture.c ./Unity/src/unity.c)
 #add_executable(Test AllTests.c ledTestsRunner.c ledTests.c)
@@ -10,7 +10,7 @@ include_directories(./Unity/extras/fixture/src)
 
 include_directories(./Unity/extras/memory/src)
 include_directories(./Unity/src)
-
+include_directories(./include/LedDriver)
 
 
 ##############################################################
