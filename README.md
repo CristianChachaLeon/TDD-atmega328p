@@ -42,5 +42,5 @@ cmake --build .
 ```
 make flash
 
-sudo minicom -D /dev/ttyACMO
+minicom -D /dev/ttyACMO
 ```
