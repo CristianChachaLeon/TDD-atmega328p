@@ -1,9 +1,15 @@
 #include "LedDriver.h"
-
+static uint8_t * ledsAddress;
 void LedDriver_Create(uint8_t * address){
-    *address = 0;
+    ledsAddress= address;
+    *ledsAddress = 0;
 }
 
 void LedDriver_Destroy(){
 
+}
+
+void LedDriver_TurnOn(uint8_t led_Numeber)
+{
+    *ledsAddress=1;
 }

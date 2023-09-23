@@ -15,4 +15,11 @@ TEST(LedDriver,LedsOffAfterCreate){
 	TEST_ASSERT_EQUAL_HEX8(0,virtualLeds);
 }
 
+TEST(LedDriver, TurnOnLedOne){
+	uint8_t virtualLeds;
+	LedDriver_Create(&virtualLeds);
+	LedDriver_TurnOn(1);
+	TEST_ASSERT_EQUAL_HEX8(1,virtualLeds);
+}
+
 
