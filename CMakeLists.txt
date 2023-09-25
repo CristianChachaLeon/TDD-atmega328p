@@ -5,6 +5,8 @@ set(PROGRAM Test)
 add_executable(${PROGRAM} 
                 test/AllTests.c 
                 test/LedDriver/ledTests.c 
+                test/CircularBuffer/CircularBuffer.c
+                test/CircularBuffer/CircularBufferRunner.c 
                 test/LedDriver/ledTestsRunner.c 
                 ./Unity/extras/fixture/src/unity_fixture.c 
                 ./Unity/src/unity.c)

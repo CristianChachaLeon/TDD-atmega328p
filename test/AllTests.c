@@ -48,6 +48,7 @@ void init_uart()
 static void RunAllTests(void)
 {
 	RUN_TEST_GROUP(LedDriver);
+	RUN_TEST_GROUP(CircularBuffer);
 
 }
 
