@@ -2,17 +2,30 @@ cmake_minimum_required(VERSION 3.10)
 
 project(TestUnity)
 set(PROGRAM Test)
-add_executable(${PROGRAM} test/AllTests.c test/LedDriver/ledTests.c test/LedDriver/ledTestsRunner.c src/LedDriver/LedDriver.c ./Unity/extras/fixture/src/unity_fixture.c ./Unity/src/unity.c)
+add_executable(${PROGRAM} 
+                test/AllTests.c 
+                test/LedDriver/ledTests.c 
+                test/LedDriver/ledTestsRunner.c 
+                ./Unity/extras/fixture/src/unity_fixture.c 
+                ./Unity/src/unity.c)
 
 #add_executable(${PROGRAM} AllTests.c ledTests.c ledTestsRunner.c ./Unity/extras/fixture/src/unity_fixture.c ./Unity/src/unity.c)
 #add_executable(Test AllTests.c ledTestsRunner.c ledTests.c)
-include_directories(./Unity/extras/fixture/src)
 
+include_directories(./Unity/extras/fixture/src)
 include_directories(./Unity/extras/memory/src)
 include_directories(./Unity/src)
-include_directories(./include/LedDriver)
+#include_directories(./Modules/LedDriver/include)
+add_subdirectory(Modules/LedDriver)
 
+target_link_libraries(${PROGRAM} PUBLIC LedDriver)
+message("El directorio de compilación del proyecto es: ${PROJECT_BINARY_DIR}")
+message("El directorio de los source del proyecto es: ${PROJECT_SOURCE_DIR}")
 
+target_include_directories(${PROGRAM}  PUBLIC
+                        "${PROJECT_SOURCE_DIR}/Modules/LedDriver/include"
+                          )
+                          
 ##############################################################
 #SUPPORT for toolchain
 ##############################################################
