@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
 
 project(TestUnity)
+
+include(CTest)
+
 set(PROGRAM Test)
 add_executable(${PROGRAM} 
                 test/AllTests.c 
@@ -25,7 +28,8 @@ target_link_libraries(${PROGRAM} PUBLIC LedDriver)
 target_include_directories(${PROGRAM}  PUBLIC
                         "${PROJECT_SOURCE_DIR}/Modules/LedDriver/include"
                           )
-                          
+                      
+add_test(NAME TestUnity COMMAND ./Test -v)
 ##############################################################
 #SUPPORT for toolchain
 ##############################################################
