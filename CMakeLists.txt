@@ -22,8 +22,12 @@ include_directories(./Unity/extras/memory/src)
 include_directories(./Unity/src)
 #include_directories(./Modules/LedDriver/include)
 add_subdirectory(Modules/LedDriver)
+add_subdirectory(Modules/CircularBuffer)
+
 
 target_link_libraries(${PROGRAM} PUBLIC LedDriver)
+target_link_libraries(${PROGRAM} PUBLIC CircularBuffer)
+
 
 target_include_directories(${PROGRAM}  PUBLIC
                         "${PROJECT_SOURCE_DIR}/Modules/LedDriver/include"

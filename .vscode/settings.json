@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "leddriver.h": "c",
+        "stdint.h": "c",
+        "circularbuffer.h": "c"
+    }
+}
