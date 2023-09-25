@@ -19,8 +19,6 @@ include_directories(./Unity/src)
 add_subdirectory(Modules/LedDriver)
 
 target_link_libraries(${PROGRAM} PUBLIC LedDriver)
-message("El directorio de compilación del proyecto es: ${PROJECT_BINARY_DIR}")
-message("El directorio de los source del proyecto es: ${PROJECT_SOURCE_DIR}")
 
 target_include_directories(${PROGRAM}  PUBLIC
                         "${PROJECT_SOURCE_DIR}/Modules/LedDriver/include"
